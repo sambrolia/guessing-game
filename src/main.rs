@@ -25,6 +25,11 @@ fn main() {
             }
         };
 
+        if guess > 100 {
+            println!("Number should be between 0 and 100.");
+            continue;
+        }
+
         println!("You guessed: {}", guess);
 
         match guess.cmp(&secret_number) {
